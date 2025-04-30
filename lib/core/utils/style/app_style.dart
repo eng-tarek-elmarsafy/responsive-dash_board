@@ -7,6 +7,7 @@ abstract class AppStyle {
     fontFamily: 'Montsrrat',
     fontWeight: FontWeight.w400,
   );
+  
   static const TextStyle styleBold16 = TextStyle(
     color: Color(0xff4eb7f2),
     fontSize: 16,
