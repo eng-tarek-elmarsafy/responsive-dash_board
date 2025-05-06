@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adapttie/views/widget/all_expenes.dart';
+import 'package:responsive_adapttie/views/widget/all_expenses.dart';
 import 'package:responsive_adapttie/views/widget/custom_drawer.dart';
 
 class DashBosrdLayout extends StatelessWidget {
