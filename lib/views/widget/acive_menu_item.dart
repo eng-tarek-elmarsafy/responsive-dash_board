@@ -13,7 +13,7 @@ class AciveMenuItem extends StatelessWidget {
     return ListTile(
       leading: SvgPicture.asset(menuItem.iconSvg),
       title: Text(menuItem.nameAction, style: AppStyle.styleBold16),
-      trailing: Container(width: 3.27, color: Color(0xff4eb7f2)),
+      trailing: Container(width: 3.27, color: const Color(0xff4eb7f2)),
     );
   }
 }

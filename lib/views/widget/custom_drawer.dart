@@ -11,32 +11,44 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        UserInfoCard(
-          userTileModel: UserTileModel(
-            imageSvg: Assets.kImagesAvatar1,
-            titile: 'Lekan Okeowo',
-            subtitile: 'demo@gmail.com',
+    return Container(
+      color: const Color(0xffffffff),
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: UserInfoCard(
+              userTileModel: UserTileModel(
+                imageSvg: Assets.kImagesAvatar1,
+                titile: 'Lekan Okeowo',
+                subtitile: 'demo@gmail.com',
+              ),
+            ),
           ),
-        ),
-        const SizedBox(height: 8),
-        const MenuItemListView(),
-        const Expanded(child: SizedBox()),
-        InAciveMenuItem(
-          menuItem: MenuItemModel(
-            iconSvg: Assets.kImagesSetting,
-            nameAction: 'Setting system',
+          const SliverToBoxAdapter(child: SizedBox(height: 8)),
+          const MenuItemListView(),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                const Expanded(child: SizedBox()),
+                InAciveMenuItem(
+                  menuItem: MenuItemModel(
+                    iconSvg: Assets.kImagesSetting,
+                    nameAction: 'Setting system',
+                  ),
+                ),
+                InAciveMenuItem(
+                  menuItem: MenuItemModel(
+                    iconSvg: Assets.kImagesLogout,
+                    nameAction: 'Logout account ',
+                  ),
+                ),
+                const SizedBox(height: 48),
+              ],
+            ),
           ),
-        ),
-        InAciveMenuItem(
-          menuItem: MenuItemModel(
-            iconSvg: Assets.kImagesLogout,
-            nameAction: 'Logout account ',
-          ),
-        ),
-        SizedBox(height: 48),
-      ],
+        ],
+      ),
     );
   }
 }

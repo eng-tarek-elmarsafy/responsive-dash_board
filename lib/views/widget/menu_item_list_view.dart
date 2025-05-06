@@ -13,10 +13,7 @@ class _MenuItemListViewState extends State<MenuItemListView> {
   int isSelected = 0;
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      padding: EdgeInsets.only(top: 20),
-      shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+    return SliverList.separated(
       itemBuilder:
           (context, index) => GestureDetector(
             onTap: () {
@@ -32,10 +29,7 @@ class _MenuItemListViewState extends State<MenuItemListView> {
             ),
           ),
       separatorBuilder: (context, index) {
-        if (index == 4) {
-          return SizedBox(height: 360);
-        }
-        return SizedBox(height: 20);
+        return const SizedBox(height: 20);
       },
       itemCount: menuItemes.length,
     );

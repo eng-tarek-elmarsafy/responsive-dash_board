@@ -11,12 +11,10 @@ class ResponsiveDashBoardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AdaptiveLayoutWidget(
-        mobilLayout: (context) => MobilLayout(),
-        tabletLayout: (context) => TabletLayout(),
-        desktopLayout: (context) => DashBosrdLayout(),
+        mobilLayout: (context) => const MobilLayout(),
+        tabletLayout: (context) => const TabletLayout(),
+        desktopLayout: (context) => const DashBosrdLayout(),
       ),
     );
   }
 }
-
-

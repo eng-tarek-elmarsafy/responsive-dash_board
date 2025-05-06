@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AdaptiveLayoutWidget extends StatelessWidget {
-  final WidgetBuilder mobilLayout, tabletLayout, desktopLayout;
   const AdaptiveLayoutWidget({
     super.key,
     required this.mobilLayout,
     required this.tabletLayout,
     required this.desktopLayout,
   });
+  final WidgetBuilder mobilLayout, tabletLayout, desktopLayout;
 
   @override
   Widget build(BuildContext context) {

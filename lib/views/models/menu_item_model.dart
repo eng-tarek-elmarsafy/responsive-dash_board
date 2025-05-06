@@ -1,10 +1,9 @@
 import 'package:responsive_adapttie/core/utils/style/app_images.dart';
 
 class MenuItemModel {
+  MenuItemModel({required this.iconSvg, required this.nameAction});
   final String iconSvg;
   final String nameAction;
-
-  MenuItemModel({required this.iconSvg, required this.nameAction});
 }
 
 final List<MenuItemModel> menuItemes = [
