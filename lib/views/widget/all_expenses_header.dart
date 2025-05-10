@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_adapttie/core/utils/style/app_style.dart';
 import 'package:responsive_adapttie/views/widget/range_options.dart';
 
-class AllExpensesWidget extends StatelessWidget {
-  const AllExpensesWidget({super.key});
+class AllExpensesHeader extends StatelessWidget {
+  const AllExpensesHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
