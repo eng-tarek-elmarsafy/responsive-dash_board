@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class Assets {
   Assets._();
-
+  
   /// Assets for kImagesAdd
   /// asstes/images/add.svg
   static const String kImagesAdd = "asstes/images/add.svg";
@@ -23,8 +23,8 @@ class Assets {
   static const String kImagesBalance = "asstes/images/balance.svg";
 
   /// Assets for kImagesCardPymint
-  /// asstes/images/card_pymint.svg
-  static const String kImagesCardPymint = "asstes/images/card_pymint.svg";
+  /// asstes/images/card_pymint.png
+  static const String kImagesCardPymint = "asstes/images/card_pymint.png";
 
   /// Assets for kImagesCardSend
   /// asstes/images/card-send.svg
@@ -34,9 +34,9 @@ class Assets {
   /// asstes/images/dashboard.svg
   static const String kImagesDashboard = "asstes/images/dashboard.svg";
 
-  /// Assets for kImagesEllipse 848
-  /// asstes/images/Ellipse 848.svg
-  static const String kImagesEllipse = "asstes/images/Ellipse 848.svg";
+  /// Assets for kImagesEllipse
+  /// asstes/images/Ellipse.svg
+  static const String kImagesEllipse = "asstes/images/Ellipse.svg";
 
   /// Assets for kImagesGallery
   /// asstes/images/gallery.svg
@@ -70,3 +70,4 @@ class Assets {
   /// asstes/images/wallet-2.svg
   static const String kImagesWallet2 = "asstes/images/wallet-2.svg";
 }
+
