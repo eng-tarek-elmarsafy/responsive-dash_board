@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adapttie/views/widget/all_expenses.dart';
+import 'package:responsive_adapttie/views/widget/all_expenes_and_quick_invoice.dart';
 import 'package:responsive_adapttie/views/widget/custom_drawer.dart';
-import 'package:responsive_adapttie/views/widget/quick_invoice.dart';
 
 class DashBosrdLayout extends StatelessWidget {
   const DashBosrdLayout({super.key});
@@ -15,10 +14,12 @@ class DashBosrdLayout extends StatelessWidget {
         Expanded(
           flex: 2,
           child: Column(
-            children: [AllExpenes(), SizedBox(height: 24), QuickInvoice()],
+            children: [SizedBox(height: 40), AllExpenesAndQuickInvoice()],
           ),
         ),
       ],
     );
   }
 }
+
+

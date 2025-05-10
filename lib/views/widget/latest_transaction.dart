@@ -12,6 +12,7 @@ class LatestTransaction extends StatelessWidget {
       children: [
         Text('Latest Transaction', style: AppStyle.styleMedium16),
         LatestTransactionlistView(),
+        Divider(height: 48, color: Color(0xffF1F1F1)),
       ],
     );
   }
