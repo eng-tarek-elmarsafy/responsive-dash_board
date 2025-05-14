@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adapttie/views/widget/all_expenes_and_quick_invoice.dart';
-import 'package:responsive_adapttie/views/widget/card_pymint.dart';
 import 'package:responsive_adapttie/views/widget/custom_drawer.dart';
+import 'package:responsive_adapttie/views/widget/my_card_section.dart';
 
 class DashBosrdLayout extends StatelessWidget {
   const DashBosrdLayout({super.key});
@@ -14,9 +14,11 @@ class DashBosrdLayout extends StatelessWidget {
         SizedBox(width: 20),
         Expanded(flex: 2, child: AllExpenesAndQuickInvoice()),
         SizedBox(width: 24),
-        Expanded(child: CardPymint()),
+        Expanded(child: MyCardSection()),
         SizedBox(width: 32),
       ],
     );
   }
 }
+
+
