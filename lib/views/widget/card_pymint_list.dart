@@ -1,3 +1,4 @@
+import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_adapttie/views/widget/card_pymint.dart';
 
@@ -8,11 +9,14 @@ class CardPymintList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 250,
-      child: PageView(
-        controller: controller,
-        children: List.generate(3, (index) => const CardPymint()),
+    return ExpandablePageView(
+      controller: controller,
+      children: List.generate(
+        3,
+        (index) => const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 3),
+          child: CardPymint(),
+        ),
       ),
     );
   }
