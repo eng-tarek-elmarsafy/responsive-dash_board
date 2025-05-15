@@ -10,15 +10,13 @@ class DashBosrdLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Expanded(child: CustomDrawer()),
+        Expanded(flex: 2, child: CustomDrawer()),
         SizedBox(width: 20),
-        Expanded(flex: 2, child: AllExpenesAndQuickInvoice()),
+        Expanded(flex: 5, child: AllExpenesAndQuickInvoice()),
         SizedBox(width: 24),
-        Expanded(child: MyCardSection()),
+        Expanded(flex: 3, child: MyCardSection()),
         SizedBox(width: 32),
       ],
     );
   }
 }
-
-
