@@ -26,11 +26,13 @@ class TreatmentListView extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: dataList.length,
-      itemBuilder: (context, index) => Treatment(data: dataList[index]),
-    );
+    return Column(children: dataList.map((e) => Treatment(data: e)).toList());
+
+    // ListView.builder(
+    //   shrinkWrap: true,
+    //   physics: const NeverScrollableScrollPhysics(),
+    //   itemCount: dataList.length,
+    //   itemBuilder: (context, index) => Treatment(data: dataList[index]),
+    // );
   }
 }

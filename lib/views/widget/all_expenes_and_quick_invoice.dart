@@ -9,12 +9,7 @@ class AllExpenesAndQuickInvoice extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       //AllExpenesQuickInvoice
-      children: [
-        SizedBox(height: 40),
-        AllExpenes(),
-        SizedBox(height: 24),
-        QuickInvoice(),
-      ],
+      children: [AllExpenes(), SizedBox(height: 24), QuickInvoice()],
     );
   }
 }

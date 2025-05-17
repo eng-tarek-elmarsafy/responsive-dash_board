@@ -14,6 +14,7 @@ class QuickInvoice extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: 24),
           QuickInvoiceHeader(),
           LatestTransaction(),
           Row(
@@ -71,6 +72,7 @@ class QuickInvoice extends StatelessWidget {
               ), //'Send Money' Color(0xffffffff)   Color(0xff4EB7F2)
             ],
           ),
+          SizedBox(height: 24),
         ],
       ),
     );

@@ -11,6 +11,7 @@ class LatestTransaction extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('Latest Transaction', style: AppStyle.styleMedium16),
+        SizedBox(height: 12),
         LatestTransactionlistView(),
         Divider(height: 48, color: Color(0xffF1F1F1)),
       ],
