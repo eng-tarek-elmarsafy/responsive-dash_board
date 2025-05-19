@@ -12,7 +12,7 @@ class ItemHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(title, style: AppStyle.styleSemiBold20),
+        Text(title, style: AppStyle.styleSemiBold20(context)),
         const Spacer(),
         Container(
           padding: const EdgeInsets.all(12),

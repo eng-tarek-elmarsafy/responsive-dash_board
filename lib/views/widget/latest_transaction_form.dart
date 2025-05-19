@@ -14,7 +14,7 @@ class LatestTransactionForm extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(text, style: AppStyle.styleMedium16),
+        Text(text, style: AppStyle.styleMedium16(context)),
         const SizedBox(height: 12),
         TextField(
           decoration: InputDecoration(
@@ -23,7 +23,7 @@ class LatestTransactionForm extends StatelessWidget {
             // border: _buildBorder(),
             enabledBorder: _buildBorder(),
             focusedBorder: _buildBorder(),
-            hintStyle: AppStyle.styleRegular16.copyWith(
+            hintStyle: AppStyle.styleRegular16(context).copyWith(
               color: const Color(0xffaaaaaa),
             ),
             hintText: hintText,

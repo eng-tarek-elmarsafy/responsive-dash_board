@@ -27,15 +27,15 @@ class CardPymint extends StatelessWidget {
               ListTile(
                 title: Text(
                   'Name card',
-                  style: AppStyle.styleRegular16.copyWith(
-                    color: const Color(0xffffffff),
-                  ),
+                  style: AppStyle.styleRegular16(
+                    context,
+                  ).copyWith(color: const Color(0xffffffff)),
                 ),
                 subtitle: Text(
                   'Syah Bandi',
-                  style: AppStyle.styleMedium20.copyWith(
-                    color: const Color(0xffffffff),
-                  ),
+                  style: AppStyle.styleMedium20(
+                    context,
+                  ).copyWith(color: const Color(0xffffffff)),
                 ),
                 trailing: SvgPicture.asset(Assets.kImagesGallery),
               ),
@@ -45,19 +45,19 @@ class CardPymint extends StatelessWidget {
                 children: [
                   Text(
                     '0918 8124 0042 8129',
-                    style: AppStyle.styleSemiBold24.copyWith(
-                      color: const Color(0xffffffff),
-                    ),
+                    style: AppStyle.styleSemiBold24(
+                      context,
+                    ).copyWith(color: const Color(0xffffffff)),
                   ),
                   Text(
                     '12/20-124',
-                    style: AppStyle.styleRegular16.copyWith(
-                      color: const Color(0xffffffff),
-                    ),
+                    style: AppStyle.styleRegular16(
+                      context,
+                    ).copyWith(color: const Color(0xffffffff)),
                   ),
                 ],
               ),
-              const SizedBox(height: 27),
+              const Flexible(child: SizedBox(height: 27)),
             ],
           ),
         ),

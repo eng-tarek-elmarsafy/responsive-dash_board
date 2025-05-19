@@ -12,7 +12,7 @@ class InAciveMenuItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(menuItem.iconSvg),
-      title: Text(menuItem.nameAction, style: AppStyle.styleMedium16),
+      title: Text(menuItem.nameAction, style: AppStyle.styleMedium16(context)),
     );
   }
 }

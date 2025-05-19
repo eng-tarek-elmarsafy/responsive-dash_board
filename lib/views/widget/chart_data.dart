@@ -20,11 +20,11 @@ class ChartData extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 12),
-          Text(chartDataModel.title, style: AppStyle.styleMedium16),
+          Text(chartDataModel.title, style: AppStyle.styleMedium16(context)),
           const Spacer(),
           Text(
             chartDataModel.rate,
-            style: AppStyle.styleMedium16.copyWith(
+            style: AppStyle.styleMedium16(context).copyWith(
               color: const Color(0xff208CC8),
             ),
           ),

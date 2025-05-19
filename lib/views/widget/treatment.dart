@@ -14,16 +14,16 @@ class Treatment extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: ListTile(
           contentPadding: const EdgeInsets.all(0),
-          title: Text(data.title, style: AppStyle.styleSemiBold16),
+          title: Text(data.title, style: AppStyle.styleSemiBold16(context)),
           subtitle: Text(
             data.date,
-            style: AppStyle.styleRegular16.copyWith(
+            style: AppStyle.styleRegular16(context).copyWith(
               color: const Color(0xffaaaaaa),
             ),
           ),
           trailing: Text(
             data.amount,
-            style: AppStyle.styleSemiBold20.copyWith(
+            style: AppStyle.styleSemiBold20(context).copyWith(
               color:
                   data.isWithdrawal
                       ? const Color(0xffF3735E)

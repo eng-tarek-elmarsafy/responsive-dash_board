@@ -16,15 +16,23 @@ class UserInfoCard extends StatelessWidget {
         color: const Color(0xfffafafa),
         child: ListTile(
           leading: SvgPicture.asset(userTileModel.imageSvg),
-          title: Text(
-            userTileModel.titile,
-            style: AppStyle.styleSemiBold16.copyWith(
-              color: const Color(0xff064061),
+          title: FittedBox(
+            alignment: AlignmentDirectional.centerStart,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              userTileModel.titile,
+              style: AppStyle.styleSemiBold16(
+                context,
+              ).copyWith(color: const Color(0xff064061)),
             ),
           ),
-          subtitle: Text(
-            userTileModel.subtitile,
-            style: AppStyle.styleRegular12,
+          subtitle: FittedBox(
+            alignment: AlignmentDirectional.centerStart,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              userTileModel.subtitile,
+              style: AppStyle.styleRegular12(context),
+            ),
           ),
         ),
       ),

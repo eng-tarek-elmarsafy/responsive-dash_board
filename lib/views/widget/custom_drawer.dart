@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_adapttie/core/utils/style/app_images.dart';
 import 'package:responsive_adapttie/views/models/menu_item_model.dart';
@@ -11,6 +13,7 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log(MediaQuery.sizeOf(context).width.toString());
     return Container(
       color: const Color(0xffffffff),
       child: CustomScrollView(

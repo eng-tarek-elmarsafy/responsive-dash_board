@@ -3,6 +3,7 @@ import 'package:responsive_adapttie/core/utils/widget/adaptive_layout_widget.dar
 import 'package:responsive_adapttie/views/widget/custom_drawer.dart';
 import 'package:responsive_adapttie/views/widget/dashboard_layout.dart';
 import 'package:responsive_adapttie/views/widget/mobil_layout.dart';
+import 'package:responsive_adapttie/core/utils/widget/size_config.dart';
 import 'package:responsive_adapttie/views/widget/tablet_layout.dart';
 
 class ResponsiveDashBoardView extends StatefulWidget {
@@ -21,7 +22,7 @@ class _ResponsiveDashBoardViewState extends State<ResponsiveDashBoardView> {
     return Scaffold(
       key: scaffoldKey,
       appBar:
-          MediaQuery.sizeOf(context).width < 800
+          MediaQuery.sizeOf(context).width < SizeConfig.taplet
               ? AppBar(
                 backgroundColor: const Color(0xff208CC8),
                 leading: IconButton(
@@ -33,7 +34,7 @@ class _ResponsiveDashBoardViewState extends State<ResponsiveDashBoardView> {
               )
               : null,
       drawer:
-          MediaQuery.sizeOf(context).width < 800
+          MediaQuery.sizeOf(context).width < SizeConfig.taplet
               ? const Drawer(child: CustomDrawer())
               : null,
       backgroundColor: const Color.fromARGB(255, 247, 249, 250),

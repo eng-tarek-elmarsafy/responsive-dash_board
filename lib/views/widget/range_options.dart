@@ -10,7 +10,7 @@ class RangeOptions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text('Monthly', style: AppStyle.styleMedium16),
+         Text('Monthly', style: AppStyle.styleMedium16(context)),
         const SizedBox(width: 18),
         Transform.rotate(
           angle: -pi / 2,

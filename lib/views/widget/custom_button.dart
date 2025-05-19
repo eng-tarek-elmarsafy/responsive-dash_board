@@ -16,13 +16,14 @@ class CustomButton extends StatelessWidget {
       height: 62,
       child: ElevatedButton(
         style: _elevatedButton(),
-        onPressed: () {
-        },
-        child: Text(
-          text,
-          style: AppStyle.styleSemiBold16.copyWith(
-            color: textColor,
-            fontSize: 18,
+        onPressed: () {},
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            text,
+            style: AppStyle.styleSemiBold16(
+              context,
+            ).copyWith(color: textColor, fontSize: 18),
           ),
         ),
       ),
