@@ -21,16 +21,27 @@ class InActivAllExpensesItem extends StatelessWidget {
         children: [
           Row(
             children: [
-              Container(
-                width: 60,
-                height: 60,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Color(0xfffafafa),
-                ),
+              Flexible(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 60),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Container(
+                        width: 60,
+                        height: 60,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Color(0xfffafafa),
+                        ),
 
-                child: Center(
-                  child: SvgPicture.asset(allExpensesItemModel.image),
+                        child: Center(
+                          child: SvgPicture.asset(allExpensesItemModel.image),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
               const Spacer(),
@@ -41,11 +52,29 @@ class InActivAllExpensesItem extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 34),
-          Text(allExpensesItemModel.title, style: AppStyle.styleSemiBold16(context)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyle.styleSemiBold16(context),
+            ),
+          ),
           const SizedBox(height: 8),
-          Text(allExpensesItemModel.date, style: AppStyle.styleRegular14(context)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyle.styleRegular14(context),
+            ),
+          ),
           const SizedBox(height: 16),
-          Text(allExpensesItemModel.price, style: AppStyle.styleSemiBold24(context)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.price,
+              style: AppStyle.styleSemiBold24(context),
+            ),
+          ),
         ],
       ),
     );
@@ -70,20 +99,30 @@ class ActivAllExpensesItem extends StatelessWidget {
         children: [
           Row(
             children: [
-              Container(
-                width: 60,
-                height: 60,
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Color.fromARGB(40, 250, 250, 250),
-                ),
-
-                child: Center(
-                  child: SvgPicture.asset(
-                    allExpensesItemModel.image,
-                    colorFilter: const ColorFilter.mode(
-                      Colors.white,
-                      BlendMode.srcIn,
+              Flexible(
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 60),
+                  child: AspectRatio(
+                    aspectRatio: 1,
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Container(
+                        width: 60,
+                        height: 60,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Color.fromARGB(40, 250, 250, 250),
+                        ),
+                        child: Center(
+                          child: SvgPicture.asset(
+                            allExpensesItemModel.image,
+                            colorFilter: const ColorFilter.mode(
+                              Colors.white,
+                              BlendMode.srcIn,
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -99,24 +138,33 @@ class ActivAllExpensesItem extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 34),
-          Text(
-            allExpensesItemModel.title,
-            style: AppStyle.styleSemiBold16(context).copyWith(
-              color: const Color(0xffffffff),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyle.styleSemiBold16(
+                context,
+              ).copyWith(color: const Color(0xffffffff)),
             ),
           ),
           const SizedBox(height: 8),
-          Text(
-            allExpensesItemModel.date,
-            style: AppStyle.styleRegular14(context).copyWith(
-              color: const Color(0xfffafafa),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyle.styleRegular14(
+                context,
+              ).copyWith(color: const Color(0xfffafafa)),
             ),
           ),
           const SizedBox(height: 16),
-          Text(
-            allExpensesItemModel.price,
-            style: AppStyle.styleSemiBold24(context).copyWith(
-              color: const Color(0xffffffff),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensesItemModel.price,
+              style: AppStyle.styleSemiBold24(
+                context,
+              ).copyWith(color: const Color(0xffffffff)),
             ),
           ),
         ],

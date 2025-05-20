@@ -13,7 +13,7 @@ class MobilLayout extends StatelessWidget {
         SliverToBoxAdapter(child: AllExpenesAndQuickInvoice()),
         SliverToBoxAdapter(child: MyCardSection()),
         SliverToBoxAdapter(child: SizedBox(height: 24)),
-        SliverToBoxAdapter(child: ChartSection()),
+        SliverFillRemaining(hasScrollBody: false, child: ChartSection()),
       ],
     );
   }

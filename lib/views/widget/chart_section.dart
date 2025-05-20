@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_adapttie/views/widget/chart_section_body.dart';
 import 'package:responsive_adapttie/views/widget/custom_container.dart';
@@ -8,6 +10,8 @@ class ChartSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.sizeOf(context).width;
+    log(width.toString());
     return const CustomContainer(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -15,7 +19,7 @@ class ChartSection extends StatelessWidget {
           SizedBox(height: 20),
           ItemHeader(title: 'Income'),
           SizedBox(height: 16),
-          ChartSectionBody(),
+          Expanded(child: ChartSectionBody()),
         ],
       ),
     );

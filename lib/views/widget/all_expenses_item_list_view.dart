@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:responsive_adapttie/core/utils/style/app_images.dart';
 import 'package:responsive_adapttie/views/models/all_expenses_item_model.dart';
@@ -39,31 +37,61 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children:
-          expensesItem.asMap().entries.map((e) {
-            int index = e.key;
-            var item = e.value;
-            return Expanded(
-              child: GestureDetector(
-                onTap: () {
-                  log(index.toString());
-
-                  setState(() {
-                    carentIndex = index;
-                  });
-                },
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    right: index == expensesItem.length - 1 ? 0 : 16,
-                  ),
-                  child:
-                      carentIndex == index
-                          ? ActivAllExpensesItem(allExpensesItemModel: item)
-                          : InActivAllExpensesItem(allExpensesItemModel: item),
-                ),
-              ),
-            );
-          }).toList(),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                carentIndex = 0;
+              });
+            },
+            child:
+                carentIndex == 0
+                    ? ActivAllExpensesItem(
+                      allExpensesItemModel: expensesItem[0],
+                    )
+                    : InActivAllExpensesItem(
+                      allExpensesItemModel: expensesItem[0],
+                    ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                carentIndex = 1;
+              });
+            },
+            child:
+                carentIndex == 1
+                    ? ActivAllExpensesItem(
+                      allExpensesItemModel: expensesItem[1],
+                    )
+                    : InActivAllExpensesItem(
+                      allExpensesItemModel: expensesItem[1],
+                    ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                carentIndex = 2;
+              });
+            },
+            child:
+                carentIndex == 2
+                    ? ActivAllExpensesItem(
+                      allExpensesItemModel: expensesItem[2],
+                    )
+                    : InActivAllExpensesItem(
+                      allExpensesItemModel: expensesItem[2],
+                    ),
+          ),
+        ),
+      ],
     );
   }
 }

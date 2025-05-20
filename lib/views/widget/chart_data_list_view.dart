@@ -25,7 +25,11 @@ class ChartDataListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: dataList.map((e) => ChartData(chartDataModel: e)).toList(),
+      mainAxisSize: MainAxisSize.min,
+      children:
+          dataList
+              .map((e) => Flexible(child: ChartData(chartDataModel: e)))
+              .toList(),
     );
   }
 }
